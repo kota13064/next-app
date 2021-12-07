@@ -1,13 +1,12 @@
-import Head from 'next/head'
+import type { NextPage } from 'next'
+import Layout from '../src/components/layout'
  
-export default function About() {
-    return (
+const AboutPage: NextPage = () => (
+    <Layout title="自己紹介" description="自己紹介ページ">
         <div>
-            <Head>
-                <title>自己紹介タイトル</title>
-                <meta name="description" content="自己紹介概要" />
-            </Head>
-            <h1>自己紹介タイトル</h1>
+            <h1>自己紹介</h1>
         </div>
-    )
-}
+    </Layout>
+)
+
+export default AboutPage
