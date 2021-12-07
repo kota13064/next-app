@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
-import Layout from '../components/layout'
+import Layout from '../src/components/layout'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -25,10 +23,12 @@ const Home: NextPage = () => {
           <p>GCPのCloud storageとFirestoreを使い、Reactで作ったシンプルなTODOアプリ。Firebase Authenticationを使ってログインできる。</p>
         </a>
 
-        <a href="https://my-app-test-77e3f.web.app/" className={styles.card}>
-          <h2>TODO app &rarr;</h2>
-          <p>GCPのCloud storageとFirestoreを使い、Reactで作ったアプリ。Firebase Authenticationを使ってログインできる。</p>
-        </a>
+        <Link href="/microCmsBlog">
+          <a className={styles.card}>
+            <h2>ブログ &rarr;</h2>
+            <p>ITや物理など</p>
+          </a>
+        </Link>
       </div>
     </Layout>
   )
